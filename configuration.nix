@@ -6,7 +6,18 @@
 
 {
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix = {
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+      auto-optimise-store = true;
+    };
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 2w";
+    };
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "25.05"; # Did you read the comment?
