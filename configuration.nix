@@ -92,6 +92,14 @@
       kdePackages.kate
       syncthing
       keepassxc
+      nerd-fonts.fira-code
+      # lazyvim dependencies
+      nodejs_20
+      gcc
+      tree-sitter
+      nil
+      ast-grep
+
     #  thunderbird
     ];
   };
@@ -131,6 +139,9 @@
       fzf
       ripgrep
       fd
+      wget
+      unzip
+      python3
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
