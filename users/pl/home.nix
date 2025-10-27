@@ -23,5 +23,31 @@
     enable = true;
     tray.enable = true;
   };
+  services.ssh-agent.enable = true;
+
+  programs.git = {
+    enable = true;
+    # TODO: uncomment this when move to unstable
+    #
+    # settings = {
+    #   user = {
+    #     name = "Pavel Lisitsyn";
+    #     email = "43790794+LisPavel@users.noreply.github.com";
+    #   };
+    #   # TODO: enable this later
+    #   core = { editor = "codium --wait"; };
+    #   init = { defaultBranch = "main"; };
+    #   push = { autoSetupRemote = true; };
+    # };
+    userName = "Pavel Lisitsyn";
+    userEmail = "43790794+LisPavel@users.noreply.github.com";
+    extraConfig = {
+      # TODO: enable this later
+      # core = { editor = "codium --wait"; };
+      init = { defaultBranch = "main"; };
+      push = { autoSetupRemote = true; };
+    };
+  };
+  programs.fish.enable = true;
 }
 
