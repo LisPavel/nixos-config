@@ -63,13 +63,6 @@
   # Enable flatpak
   services.flatpak.enable = true;
 
-  # Enable syncthing 
-  services.syncthing = {
-    # enable = true;
-    openDefaultPorts = true;
-    # extraFlags = [ "--no-default-folder" ];
-  };
-
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.

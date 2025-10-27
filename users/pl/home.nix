@@ -3,7 +3,6 @@
   home.stateVersion = "25.05";
   home.packages = with pkgs; [
     kdePackages.kate
-    syncthing
     keepassxc
     nerd-fonts.fira-code
     lazygit
@@ -20,5 +19,9 @@
     fd
   ];
 
+  services.syncthing = {
+    enable = true;
+    tray.enable = true;
+  };
 }
 
