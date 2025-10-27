@@ -3,9 +3,4 @@
 
 {
   users.mutableUsers = true;
-
-  environment.systemPackages = with pkgs;
-    [
-
-    ];
 }

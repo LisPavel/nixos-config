@@ -6,6 +6,6 @@
     isNormalUser = true;
     description = "Maya";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [ kdePackages.kate ];
   };
+  home-manager.users.mk = ./home.nix;
 }
