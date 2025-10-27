@@ -16,11 +16,11 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
-          ./hosts/default.nix
-          ./hosts/nixos-laptop/default.nix
-          ./users/default.nix
-          ./users/mk/default.nix
-          ./users/pl/default.nix
+          ./hosts
+          ./hosts/nixos-laptop
+          ./users
+          ./users/mk
+          ./users/pl
 
           # Home Manager module
           home-manager.nixosModules.home-manager
