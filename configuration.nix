@@ -5,6 +5,7 @@
 { config, pkgs, ... }:
 
 {
+  imports = [ ./modules ];
 
   nix = {
     settings = {

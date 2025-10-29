@@ -81,6 +81,24 @@
       };
     };
   };
+  services.byedpi = {
+    enable = true;
+    extraArgs = [
+      "-o1"
+      "-a1"
+      "-At,r,s"
+      "-f-1"
+      "-a1"
+      "-Ar,s"
+      "-o1"
+      "-a1"
+      "-At"
+      "-r1+s"
+      "-f-1"
+      "-t6"
+      "-a1"
+    ];
+  };
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
