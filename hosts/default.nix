@@ -61,8 +61,26 @@
   };
 
   # Enable flatpak
-  services.flatpak.enable = true;
-
+  services.flatpak = {
+    enable = true;
+    packages = [
+      "com.github.tchx84.Flatseal"
+      "it.mijorus.gearlever"
+      "org.qbittorrent.qBittorrent"
+      "md.obsidian.Obsidian"
+      "app.zen_browser.zen"
+      "org.videolan.VLC"
+      "org.onlyoffice.desktopeditors"
+      "io.github.flattool.Warehouse"
+    ];
+    update = {
+      onActivation = false;
+      auto = {
+        enable = true;
+        onCalendar = "weekly";
+      };
+    };
+  };
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.

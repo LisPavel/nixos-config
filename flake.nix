@@ -7,9 +7,10 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    flatpaks.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, flatpaks, ... }@inputs: {
     nixosConfigurations = {
       nixos-laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -22,11 +23,15 @@
           ./users/mk
           ./users/pl
 
+          # nix-flatpak
+          flatpaks.nixosModules.nix-flatpak
+
           # Home Manager module
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs.flake-inputs = inputs;
             home-manager.backupFileExtension = "backup";
           }
         ];
