@@ -3,6 +3,7 @@
 
 {
   imports = [ ./hardware-configuration.nix ];
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   networking.hostName = "nixos-laptop"; # Define your hostname.
   # Enable OpenGL
   hardware.graphics = {
