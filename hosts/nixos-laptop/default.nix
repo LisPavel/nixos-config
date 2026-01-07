@@ -10,6 +10,10 @@
     enable = true;
     enable32Bit = true;
   };
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
 
   services.xserver.videoDrivers = [ "amdgpu" ];
   programs.steam = {
