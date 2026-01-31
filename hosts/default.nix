@@ -107,6 +107,11 @@
     curl
     wget
     unzip
+
+    v2rayn
+    xray
+    sing-box
+    throne
   ];
 
   programs.neovim.enable = true;
