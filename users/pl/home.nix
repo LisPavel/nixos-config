@@ -3,7 +3,7 @@
   imports = [ flake-inputs.flatpaks.homeManagerModules.nix-flatpak ];
   home.stateVersion = "25.05";
   home.packages = with pkgs; [
-    kdePackages.kate
+    # kdePackages.kate
     keepassxc
     nerd-fonts.fira-code
     lazygit

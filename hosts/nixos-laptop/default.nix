@@ -2,7 +2,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [ ./hardware-configuration.nix ../../packages/de/plasma.nix ];
   boot.kernelPackages = pkgs.linuxPackages_latest;
   networking.hostName = "nixos-laptop"; # Define your hostname.
   # Enable OpenGL

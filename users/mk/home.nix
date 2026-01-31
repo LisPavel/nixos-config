@@ -1,7 +1,7 @@
 # users/mk/home.nix
 { pkgs, ... }: {
   home.stateVersion = "25.05";
-  home.packages = with pkgs; [ kdePackages.kate ];
+  # home.packages = with pkgs; [ kdePackages.kate ];
   # Russian language settings
   home.sessionVariables = {
     LANG = "ru_RU.UTF-8";
