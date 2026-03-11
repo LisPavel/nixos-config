@@ -10,5 +10,17 @@
   # services.gnome.core-developer-tools.enable = false;
   services.gnome.games.enable = false;
   # environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];
+  environment.systemPackages = with pkgs.gnomeExtensions; [
+    blur-my-shell
+    just-perfection
+    appindicator
+    vitals
+  ];
+
+  qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style = "adwaita-dark";
+  };
 
 }
