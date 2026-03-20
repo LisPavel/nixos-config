@@ -58,6 +58,11 @@
       push = { autoSetupRemote = true; };
     };
   };
-  programs.fish.enable = true;
+  programs.fish = {
+    enable = true;
+    shellAliases = {
+      "sys-upgrade" = "sudo nixos-rebuild switch --flake ~/nixos-config";
+    };
+  };
 }
 
