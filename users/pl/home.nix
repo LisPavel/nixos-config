@@ -1,7 +1,7 @@
 # users/pl/home.nix
 { pkgs, flake-inputs, ... }: {
   imports = [ flake-inputs.flatpaks.homeManagerModules.nix-flatpak ];
-  home.stateVersion = "25.05";
+  home.stateVersion = "25.11";
   home.packages = with pkgs; [
     # kdePackages.kate
     keepassxc
