@@ -114,7 +114,6 @@
   programs.htop.enable = true;
   programs.fish.enable = true;
   programs.git.enable = true;
-  programs.kdeconnect.enable = true;
   programs.firefox.enable = true;
 
   # Open ports in the firewall.
