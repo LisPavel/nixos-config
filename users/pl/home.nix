@@ -1,5 +1,6 @@
 # users/pl/home.nix
-{ pkgs, flake-inputs, ... }: {
+{ pkgs, flake-inputs, ... }:
+{
   imports = [ flake-inputs.flatpaks.homeManagerModules.nix-flatpak ];
   home.stateVersion = "25.11";
   home.packages = with pkgs; [
@@ -18,6 +19,7 @@
     fzf
     ripgrep
     fd
+    statix
   ];
 
   services.syncthing = {
@@ -54,8 +56,12 @@
       };
       # TODO: enable this later
       # core = { editor = "codium --wait"; };
-      init = { defaultBranch = "main"; };
-      push = { autoSetupRemote = true; };
+      init = {
+        defaultBranch = "main";
+      };
+      push = {
+        autoSetupRemote = true;
+      };
     };
   };
   programs.fish = {
@@ -65,4 +71,3 @@
     };
   };
 }
-
