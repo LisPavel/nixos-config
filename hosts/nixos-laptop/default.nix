@@ -5,6 +5,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/de/gnome.nix
+    ../../modules/pstate.nix
   ];
   boot.kernelPackages = pkgs.linuxPackages_latest;
   networking.hostName = "nixos-laptop"; # Define your hostname.
