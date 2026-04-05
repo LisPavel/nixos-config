@@ -1,4 +1,4 @@
-# packages/de/plasma.nix
+# modules/de/plasma.nix
 { config, pkgs, ... }:
 
 {

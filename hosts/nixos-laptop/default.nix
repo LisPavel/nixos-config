@@ -2,7 +2,10 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ../../packages/de/gnome.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ../../modules/de/gnome.nix
+  ];
   boot.kernelPackages = pkgs.linuxPackages_latest;
   networking.hostName = "nixos-laptop"; # Define your hostname.
   # Enable OpenGL
