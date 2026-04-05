@@ -68,6 +68,7 @@
     enable = true;
     shellAliases = {
       "sys-upgrade" = "sudo nixos-rebuild switch --flake ~/nixos-config";
+      "sys-upgrade-onboot" = "sudo nixos-rebuild boot --flake ~/nixos-config";
     };
   };
 }
