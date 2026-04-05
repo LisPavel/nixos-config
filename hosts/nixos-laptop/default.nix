@@ -13,6 +13,9 @@
     enable = true;
     enable32Bit = true;
   };
+  # opencl setup
+  hardware.amdgpu.opencl.enable = true;
+  # bluetooth setup
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
